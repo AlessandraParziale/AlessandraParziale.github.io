@@ -117,11 +117,11 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    width: 15rem; /* Cambia la dimensione a tuo piacere */
-    height: 15rem; /* Altezza uguale alla larghezza per renderla quadrata */
-    border: 0.5rem solid rgba(255, 255, 255, 0.2); /* Mantieni il bordo */
-    border-radius: 0; /* Rendi i bordi non arrotondati per una forma quadrata */
-    object-fit: cover; /* Assicura che l'immagine si adatti bene alla dimensione */
+    width: 20rem;
+    height: 20rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    object-fit: cover;
 }
 
   #sideNav .navbar-collapse {
