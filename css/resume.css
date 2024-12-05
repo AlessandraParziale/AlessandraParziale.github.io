@@ -72,7 +72,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #bd385b;
+  background-color: #c88395;
 }
 
 .dev-icons {
@@ -80,7 +80,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #bd385b;
+  color: #c88395;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -117,10 +117,13 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
-  }
+    width: 15rem; /* Cambia la dimensione a tuo piacere */
+    height: 15rem; /* Altezza uguale alla larghezza per renderla quadrata */
+    border: 0.5rem solid rgba(255, 255, 255, 0.2); /* Mantieni il bordo */
+    border-radius: 0; /* Rendi i bordi non arrotondati per una forma quadrata */
+    object-fit: cover; /* Assicura che l'immagine si adatti bene alla dimensione */
+}
+
   #sideNav .navbar-collapse {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -176,15 +179,15 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #bd385b !important;
+  background-color: #c88395 !important;
 }
 
 .text-primary {
-  color: #bd385b !important;
+  color: #c88395 !important;
 }
 
 a {
-  color: #bd385b;
+  color: #c88395;
 }
 
 a:hover, a:focus, a:active {
