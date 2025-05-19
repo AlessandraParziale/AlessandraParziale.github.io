@@ -1,0 +1,81 @@
+{
+    "profile": {
+        "name": "Alessandra Parziale",
+        "title": "Research Assistant",
+        "specialty": "Currently working on Fairness Engineering and Testing",
+        "socialLinks": {
+            "linkedin": "https://it.linkedin.com/in/alessandra-parziale",
+            "github": "https://github.com/AlessandraParziale",
+            "googleScholar": "https://scholar.google.com/citations?user=c7uV7wIAAAAJ&hl=it"
+        }
+    },
+    "about": {
+        "paragraphs": [
+            
+            "I graduated cum laude in 2024 with a Master's degree in Computer Science from the University of Salerno, specializing in Software Engineering and IT Management. I am currently a research assistant at the Software Engineering Laboratory (SeSa), where I focus on studying and experimenting with techniques for analyzing and testing fairness in Machine Learning systems."
+         ]
+    },
+    "awards and recognition": [
+        {
+            "icon": "brain",
+            "title": "Best Paper Award For Contextual Fairness-Aware Practices in ML: A Cost-Effective Empirical Evaluation",
+            "description": "1st International Workshop on Fairness in Software Systems \"<br> SANER 2025 | Montréal, Québec, Canada</b>"
+        }
+    ],
+    "publications": [
+        {
+            "title": "Contextual Fairness-Aware Practices in ML: A Cost-Effective Empirical Evaluation",
+            "authors": "<b>A. Parziale</b>, G. Voria, G. Giordano, G. Catolino, G. Robles, F. Palomba",
+            "journal": "Proceedings of the 1st International Workshop on Fairness in Software Systems",
+            "pdfFile": "Fairness-Aware Practices.pdf",
+            "type":"SANER | 2025"
+
+        },
+        {
+            "title": "prova",
+            "authors": "<b>A. Della Porta</b>, G. Recupito, S.Lambiase, D. Di Nucci, F. Palomba",
+            "journal": "Software Quality Assurance For Artificial Intelligence (SQA4AI), 2025",
+            "link": "https://example.com/publication1",
+            "pdfFile": "patterns_complexity.pdf",
+            "type":"conference"
+
+        }
+    ],
+    "cv": {
+         "research_experience": [
+            {
+                "title": "Research Assistant",
+                "institution": "University of Salerno",
+                "period": "November 2024 - Present",
+                "description": "Worked on the project QualAI - Continuous Quality Assurance for AI Systems"
+            },
+            {
+                "title": "Erasmus+ Traineeship",
+                "institution": "Rey Juan Carlos University [Madrid, Spain]",
+                "period": "July 22, 2022",
+                "description": "Advisors: Prof. Gregorio Robles Martinez and Prof. Fabio Palomba"
+            }
+
+        ],
+        "projects": [
+            {
+                "title": "Esistere",
+                "description": "Managed a team of university students to develop Esistere, a web application dedicated to creating technological solutions to improve the lives of Alzheimer's patients and their caregivers."
+            }
+        ],
+        "education": [
+            {
+                "title": "Master's Degree in Computer Science",
+                "institution": "Software Engineering and IT Management - University of Salerno",
+                "period": "July 26, 2024",
+                "description": "<b>Advisor: Prof. Fabio Palomba\"<br>Final Mark: 110/110 cum laude</b>"
+            },
+            {
+                "title": "Bachelor's Degree in Computer Science",
+                "institution": "University of Salerno",
+                "period": "July 22, 2022",
+                "description": "<b>Advisor: Prof. Fabio Palomba</b>"
+            }
+        ]
+    }
+}
