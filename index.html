@@ -12,10 +12,16 @@
     <link rel="stylesheet" href="css/publications.css">
     <link rel="stylesheet" href="css/research.css">
     <link rel="stylesheet" href="css/utils.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" href="assets/icons/favicon.ico">
+
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/android-chrome-x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-chrome-x192.png">
+    <link rel="apple-touch-icon" sizes="200x200" href="assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="manifest" href="assets/icons/site.webmanifest">
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
     <script>
@@ -26,157 +32,536 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <a href="#" class="logo"></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#cv">CV</a></li>
-                </ul>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
+<!-- Header -->
+<header>
+    <div class="container nav-container">
+        <a href="#" class="logo"></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#cv">Experience</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
 
-    <!-- Compact Merged Hero and About Section with Relocated Info Boxes -->
-    <section id="home" class="hero-about">
-        <div class="container hero-about-container">
-            <!-- Single Card Layout -->
-            <div class="hero-card">
-                <!-- Left Column: Profile Image and Info Boxes -->
-                <div class="profile-column">
-                    <div class="profile-image">
-                        <img src="assets/photo.jpg" alt="Alessandra Parziale">
-                    </div>
+<!-- Compact Merged Hero and About Section with Relocated Info Boxes -->
+<section id="home" class="hero-about">
+    <div class="container hero-about-container">
+        <!-- Single Card Layout -->
+        <div class="hero-card">
+            <!-- Left Column: Profile Image and Info Boxes -->
+            <div class="profile-column">
 
-                    <!-- Info Grid - Now inside the left column -->
-                    <div class="profile-info">
-                        <!-- Research Interests -->
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-flask"></i>
+                <div class="profile-image">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="assets/photo.jpg" alt="Alessandra Parziale">
                             </div>
-                            <div class="info-content">
-                                <h4>Research</h4>
-                                <p>Fairness Engineering and Testing</p>
-                            </div>
-                        </div>
-
-                        <!-- Education -->
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="info-content">
-                                <h4>Education</h4>
-                                <p>Master Degree in Computer Science</p>
-                            </div>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="info-content">
-                                <h4>Email</h4>
-                                <p>alparziale@unisa.it</p>
-                            </div>
-                        </div>
-
-                        <!-- Location -->
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="info-content">
-                                <h4>Location</h4>
-                                <p>University of Salerno</p>
+                            <div class="flip-card-back">
+                                <img src="assets/photo-back.png" alt="Alessandra Parziale">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Text Content -->
-                <div class="profile-content">
-                    <!-- Header Area -->
-                    <div class="profile-header">
-                        <h1 class="hero-name">Alessandra Parziale</h1>
-                        <p class="hero-title">Research Assistant in the Software Engineering Lab <a href="https://sesalabunisa.github.io/en/index.html">(SeSa)</a></p>
 
-                        <!-- Social Icons -->
-                        <div class="social-icons">
-                            <a href="https://github.com/atdepo" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://it.linkedin.com/in/alessandra-parziale" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="https://scholar.google.com/citations?user=c7uV7wIAAAAJ&hl=it" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                <!-- Single Info Box - All information in one container -->
+                <div class="profile-info-unified">
+                    <!-- Research -->
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong>Research:</strong> Fairness Engineering & Testing
                         </div>
                     </div>
 
-                    <!-- Bio Section -->
+                    <!-- Location -->
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong>Location:</strong> University of Salerno
+                        </div>
+                    </div>
 
-                    <!-- CV Download button -->
-                    <div class="cv-download-container">
-                        <a href="assets/AlessandraParziale_CV.pdf" download class="cv-download-btn">
-                            <i class="fas fa-file-download"></i> Download CV (PDF)
+                    <!-- Affiliation -->
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong>Affiliation:</strong> <a href="https://sesalabunisa.github.io/en/index.html" target="_blank">Software Engineering (SeSa) Lab</a>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong>Email:</strong> alparziale@unisa.it
+                        </div>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong>Date of Birth:</strong> October 21, 2000
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Text Content -->
+            <div class="profile-content">
+                <!-- Header Area -->
+                <div class="profile-header">
+                    <h1 class="hero-name">Alessandra Parziale</h1>
+                    <p class="hero-title">Research Assistant</p>
+
+                    <!-- Social Icons with tooltips -->
+                    <div class="social-icons">
+                        <a href="https://scholar.google.com/citations?user=c7uV7wIAAAAJ&hl=it" target="_blank" class="social-link" data-tooltip="Alessandra Parziale">
+                            <i class="fas fa-graduation-cap"></i>
                         </a>
+
+                        <a href="https://it.linkedin.com/in/alessandra-parziale" target="_blank" class="social-link" data-tooltip="alessandra-parziale">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="https://x.com/ale_parziale?s=11" target="_blank" class="social-link" data-tooltip="ale_parziale">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/alessandra-parziale?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-link" data-tooltip="alessandra_parziale_">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://github.com/AlessandraParziale" target="_blank" class="social-link" data-tooltip="AlessandraParziale">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
                     </div>
+                </div>
+
+                <!-- Bio Section -->
+                <div class="about-bio">
+                </div>
+
+                <!-- CV Download button -->
+                <div class="cv-download-container">
+                    <a href="assets/AlessandraParziale_CV.pdf" download class="cv-download-btn">
+                        <i class="fas fa-file-download"></i> Download CV (PDF)
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-        <!-- Publications Section -->
-    <section id="publications" class="section publications">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
+<!-- Publications Section -->
+<section id="publications" class="section publications">
+    <div class="container">
+        <h2 class="section-title">Publications</h2>
+    </div>
+</section>
+
+<!-- Research Section -->
+<section id="awards" class="section research">
+    <div class="container">
+        <h2 class="section-title">Awards and Recognition</h2>
+        <div class="research-grid">
+            <!-- Research items will be dynamically populated -->
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Research Section -->
-    <section id="awards" class="section research">
-        <div class="container">
-            <h2 class="section-title">Awards and Recognition</h2>
-            <div class="research-grid">
-                <!-- Research items will be dynamically populated -->
-            </div>
-        </div>
-    </section>
-    
-    <!-- CV Section -->
-    <section id="cv" class="section cv">
-        <div class="container">
-            <h2 class="section-title">Curriculum Vitae</h2>
-            <div class="cv-grid">
-                <div class="cv-column">
-                    <div class="cv-section research-experience">
-                        <h3>Experience</h3>
-                        <!-- Education items will be dynamically populated -->
-                    </div>
-                    <div class="cv-section projects">
-                        <h3>Projects</h3>
-                        <!-- Research experience items will be dynamically populated -->
-                    </div>
-                    <div class="cv-section education">
-                        <h3>Education</h3>
-                        <!-- Research experience items will be dynamically populated -->
-                    </div>
+<!-- CV Section -->
+<section id="cv" class="section cv">
+    <div class="container">
+        <h2 class="section-title"> </h2>
+        <div class="cv-grid">
+            <div class="cv-column">
+                <div class="cv-section research-experience">
+                    <h3>Research Experience</h3>
+                    <!-- Education items will be dynamically populated -->
+                </div>
+                <div class="cv-section experience">
+                    <h3>Experience</h3>
+                    <!-- Education items will be dynamically populated -->
+                </div>
+                <div class="cv-section projects">
+                    <h3>Projects</h3>
+                    <!-- Research experience items will be dynamically populated -->
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p></p>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p></p>
+    </div>
+</footer>
+
+<style>
+        /* Stile per il contenitore dell'immagine del profilo */
+    .profile-image {
+        width: 250px;
+        height: 300px; /* Altezza maggiore per una foto rettangolare */
+        margin: 20px auto;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Flip Card Effect */
+    .flip-card {
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        perspective: 1000px; /* 3D effect */
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    /* Add hover effect - only rotate on hover */
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        overflow: hidden;
+        border-radius: 8px; /* Bordi leggermente arrotondati invece che circolare */
+    }
+
+    .flip-card-front {
+        background-color: #bbb;
+    }
+
+    .flip-card-back {
+        background-color: #bbb;
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front img, .flip-card-back img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Styles for the unified profile info box */
+    .profile-info-unified {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    .info-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 8px 0;
+    }
+
+    .info-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .info-row .info-icon {
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .info-row .info-icon i {
+        color: white;
+        font-size: 16px;
+    }
+
+    .info-row .info-content {
+        flex: 1;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #333;
+    }
+
+    .info-row .info-content strong {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+
+    .info-row .info-content a {
+        color: #667eea;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .info-row .info-content a:hover {
+        color: #764ba2;
+        text-decoration: underline;
+    }
+
+    /* Tooltip styles for social icons */
+    .social-link {
+        position: relative;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .social-link::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #333;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+        z-index: 1000;
+    }
+
+    .social-link::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid transparent;
+        border-bottom-color: #333;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+        z-index: 1000;
+    }
+
+    .social-link:hover::before,
+    .social-link:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .social-link:hover {
+        transform: translateY(-2px);
+    }
+
+    /* Media query per responsività */
+    @media (max-width: 768px) {
+        .profile-image {
+            width: 200px;
+            height: 240px;
+            margin: 15px auto;
+        }
+
+        .profile-info-unified {
+            padding: 15px;
+        }
+
+        .info-row .info-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 12px;
+        }
+
+        .info-row .info-icon i {
+            font-size: 14px;
+        }
+
+        .info-row .info-content {
+            font-size: 13px;
+        }
+
+        /* Adjust tooltip position on mobile */
+        .social-link::before {
+            bottom: -40px;
+            font-size: 11px;
+        }
+    }
+    /* Styles for the unified profile info box */
+    .profile-info-unified {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    .info-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 8px 0;
+    }
+
+    .info-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .info-row .info-icon {
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .info-row .info-icon i {
+        color: white;
+        font-size: 16px;
+    }
+
+    .info-row .info-content {
+        flex: 1;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #333;
+    }
+
+    .info-row .info-content strong {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+
+    .info-row .info-content a {
+        color: #667eea;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .info-row .info-content a:hover {
+        color: #764ba2;
+        text-decoration: underline;
+    }
+
+    /* Tooltip styles for social icons */
+    .social-link {
+        position: relative;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .social-link::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #333;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+        z-index: 1000;
+    }
+
+    .social-link::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid transparent;
+        border-bottom-color: #333;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+        z-index: 1000;
+    }
+
+    .social-link:hover::before,
+    .social-link:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .social-link:hover {
+        transform: translateY(-2px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .profile-info-unified {
+            padding: 15px;
+        }
+
+        .info-row .info-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 12px;
+        }
+
+        .info-row .info-icon i {
+            font-size: 14px;
+        }
+
+        .info-row .info-content {
+            font-size: 13px;
+        }
+
+        /* Adjust tooltip position on mobile */
+        .social-link::before {
+            bottom: -40px;
+            font-size: 11px;
+        }
+    }
+</style>
 </body>
 </html>

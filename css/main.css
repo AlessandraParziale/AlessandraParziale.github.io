@@ -1,11 +1,11 @@
 /* Variables */
 :root {
-    --primary-color: #4D6DE3;           /* Bright indigo blue */
-    --primary-gradient: linear-gradient(135deg, #4D6DE3 0%, #8094F1 100%);
-    --secondary-color: #6B4DE3;         /* Purple */
-    --secondary-gradient: linear-gradient(135deg, #6B4DE3 0%, #9E80F1 100%);
-    --accent-color: #E34D9E;            /* Magenta accent */
-    --accent-light: #F180C5;            /* Light magenta for subtle highlights */
+    --primary-color: #6B4DE3;           /* Bright indigo blue */
+    --primary-gradient: linear-gradient(135deg, #9E80F1 0%, #9E80F1 100%);
+    --secondary-color: #BFA2DB;         /* Purple */
+    --secondary-gradient: linear-gradient(135deg, #BFA2DB 0%, #9E80F1 100%);
+    --accent-color: #BFA2DB;            /* Magenta accent */
+    --accent-light: #BFA2DB;            /* Light magenta for subtle highlights */
     --light-color: #F5F7FF;             /* Very light blue-tinted background */
     --dark-color: #2A2D47;              /* Dark blue-purple for footer */
     --text-color: #2D3142;              /* Dark blue-gray for main text */
@@ -272,8 +272,9 @@ img {
     box-shadow: 0 12px 25px rgba(107, 77, 227, 0.3);
 }
 
-.btn-icon:hover i {
-    transform: translateX(5px);
+
+.about-bio p {
+    font-weight: normal !important;
 }
 
 /* Download button style - special case for the CV */

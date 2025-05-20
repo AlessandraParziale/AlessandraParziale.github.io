@@ -298,19 +298,9 @@
     border-radius: 10px;
     transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(77, 109, 227, 0.15);
-    background: var(--primary-color);
-}
-
-.social-icons a:nth-child(2) {
     background: var(--secondary-color);
-    border-radius: 50%;
 }
 
-.social-icons a:nth-child(3) {
-    background: var(--accent-color);
-    border-radius: 4px;
-    transform: rotate(45deg);
-}
 
 .social-icons a:nth-child(3) i {
     transform: rotate(-45deg);
@@ -319,10 +309,6 @@
 .social-icons a:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 15px rgba(77, 109, 227, 0.2);
-}
-
-.social-icons a:nth-child(3):hover {
-    transform: translateY(-3px) rotate(45deg);
 }
 
 /* Bio section */
@@ -377,11 +363,11 @@
     font-weight: 500;
 }
 
-/* CV download button container */
 .cv-download-container {
     margin-top: 1.5rem;
     display: flex;
     justify-content: center;
+    height: 60px;   /* altezza fissa */
 }
 
 /* Download button */
@@ -626,4 +612,91 @@
         height: 32px;
         min-width: 32px;
     }
+
+
+
+    /* Container per la flip card */
+    .flip-card {
+        width: 100%;
+        height: auto;
+        perspective: 1000px;
+    }
+
+    /* Imposta proporzioni fisse per mantenere la dimensione durante la rotazione */
+    .flip-card::after {
+        content: "";
+        display: block;
+        padding-bottom: 125%;
+    }
+
+    /* Contenitore interno che gestisce la rotazione */
+    .flip-card-inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(77, 109, 227, 0.15);
+    }
+
+    /* Effetto hover per attivare la rotazione */
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Posizionamento fronte/retro */
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 4px solid white;
+    }
+
+    /* Lato frontale (posizione predefinita) */
+    .flip-card-front {
+        background-color: white;
+    }
+
+    /* Lato posteriore (ruotato di 180 gradi) */
+    .flip-card-back {
+        transform: rotateY(180deg);
+        background-color: white;
+    }
+
+    /* Stile delle immagini all'interno della card */
+    .flip-card-front img, .flip-card-back img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: none; /* Rimuovi la transizione esistente per evitare conflitti */
+        border: none; /* Rimuovi il bordo esistente poiché lo abbiamo già nei container */
+    }
+
+    /* Mantieni gli effetti decorativi esistenti */
+    .profile-image::before,
+    .profile-image::after {
+        z-index: 1; /* Assicurati che gli elementi decorativi siano sopra la card */
+    }
+
+    /* Aggiornamento per i dispositivi mobili */
+    @media (max-width: 768px) {
+        .flip-card::after {
+            padding-bottom: 130%; /* Leggermente più alto su mobile se necessario */
+        }
+    }
+
+    /* Per dispositivi molto piccoli, mantieni la proporzione */
+    @media (max-width: 360px) {
+        .flip-card::after {
+            padding-bottom: 125%;
+        }
+    }
+
 }

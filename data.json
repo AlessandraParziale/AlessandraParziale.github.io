@@ -1,0 +1,49 @@
+{
+  "home": {
+    "name": "Alessandra Parziale",
+    "title": "Software Engineering for AI Researcher",
+    "shortBio": "",
+    "photoUrl": "photo.jpg",
+    "fullBio": [
+    ""
+      ]
+  },
+  "publications": [
+    {
+      "title": "Contextual Fairness-Aware Practices in ML: A Cost-Effective Empirical Evaluation",
+      "authors": "<b>A. Parziale</b>, G. Voria, G. Giordano, G. Catolino, G. Robles, F. Palomba",
+      "journal": "Proceedings of the 1st International Workshop on Fairness in Software Systems (Fairness’2025)",
+      "pdfFile": "Fairness-Aware Practices.pdf",
+      "type":"SANER | 2025"
+
+    }
+  ],
+
+  "cv": {
+    "research_experience": [
+      {
+        "title": "Research Assistant",
+        "institution": "University of Salerno",
+        "period": "November 2024 - Present"
+      }
+    ],
+
+    "experience": [
+      {
+        "title": "Erasmus+ Traineeship",
+        "institution": "Rey Juan Carlos University [Madrid, Spain]",
+        "period": "July 2022",
+        "description": "Advisors: <b> Prof. Gregorio Robles Martinez </b> and <b>Prof. Fabio Palomba</b>"
+      }
+
+    ],
+    "projects": [
+      {
+        "title": "Esistere",
+        "institution": "University of Salerno",
+        "period": "March 2024",
+        "description": "Managed a team of university students to develop Esistere, <br> a web application dedicated to creating technological solutions <br> to improve the lives of Alzheimer's patients and their caregivers."
+      }
+    ]
+  }
+}

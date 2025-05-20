@@ -15,6 +15,7 @@ header {
     border-image: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--accent-color)) 1;
 }
 
+
 header.scrolled {
     padding: 0.7rem 0;
 }
@@ -26,7 +27,15 @@ header.scrolled {
     position: relative;
 }
 
-/* Add decorative elements to container */
+.social-icons .fa-graduation-cap {
+    /* Ensure the icon is displayed correctly */
+    transform: none !important;
+}
+
+.social-icons a:nth-child(3) .fa-graduation-cap {
+    transform: none !important;
+}
+
 .nav-container::before {
     content: '';
     position: absolute;

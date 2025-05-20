@@ -4,67 +4,12 @@
     padding: 4rem 0;
 }
 
-.publications .container {
-    position: relative;
-    z-index: 1;
-}
-
 .publications-controls {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 2rem;
-    width: 100%;
-}
-
-.publications-filter {
-    display: inline-flex;
-    gap: 0.5rem;
-    background-color: white;
-    border-radius: 12px;
-    padding: 0.5rem;
-    box-shadow: 0 8px 20px rgba(77, 109, 227, 0.15);
-    border: 2px solid rgba(77, 109, 227, 0.15);
-    position: relative;
-    z-index: 1;
-}
-
-.publications-filter-btn {
-    padding: 0.5rem 1.3rem;
-    border: none;
-    border-radius: 8px;
-    background-color: transparent;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    color: var(--light-text);
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.publications-filter-btn.active[data-filter="journal"] {
-    color: white;
-    background-color: #6B4DE3;
-    box-shadow: 0 4px 10px rgba(107, 77, 227, 0.3);
-    transform: translateY(-2px);
-}
-
-.publications-filter-btn.active[data-filter="conference"] {
-    color: white;
-    background-color: #E34D9E;
-    box-shadow: 0 4px 10px rgba(227, 77, 158, 0.3);
-    transform: translateY(-2px);
-}
-
-.publications-filter-btn.active[data-filter="all"] {
-    color: white;
-    background-color: var(--primary-color);
-    box-shadow: 0 4px 10px rgba(77, 109, 227, 0.3);
-    transform: translateY(-2px);
+    display: none;
 }
 
 .publication-list {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -79,12 +24,10 @@
     overflow: hidden;
 }
 
-.publication-item[data-type="journal"] {
-    border-left-color: #6B4DE3;
-}
 
-.publication-item[data-type="conference"] {
-    border-left-color: #E34D9E;
+
+.publication-item{
+    border-left-color: #BFA2DB;
 }
 
 .publication-content {
@@ -100,7 +43,7 @@
 }
 
 .publication-title {
-    font-weight: 700;
+    font-weight: 1200;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     font-size: 1.05rem;
@@ -145,13 +88,8 @@
     align-self: flex-start;
 }
 
-.publication-type-tag.journal {
-    background-color: rgba(107, 77, 227, 0.1);
-    color: #6B4DE3;
-    border: 1px solid rgba(107, 77, 227, 0.3);
-}
 
-.publication-type-tag.conference {
+.publication-type-tag{
     background-color: rgba(227, 77, 158, 0.1);
     color: #E34D9E;
     border: 1px solid rgba(227, 77, 158, 0.3);
