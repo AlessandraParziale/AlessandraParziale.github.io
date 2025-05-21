@@ -214,11 +214,12 @@ function loadDynamicContent() {
                     "title": "Research Assistant",
                     "specialty": "Currently working on Fairness Engineering and Testing",
                     "socialLinks": {
-                        "linkedin": "https://it.linkedin.com/in/alessandra-parziale",
-                        "github": "https://github.com/AlessandraParziale",
                         "googleScholar": "https://scholar.google.com/citations?user=c7uV7wIAAAAJ&hl=it",
-                        "twitter": "https://twitter.com/yourusername",
-                        "instagram": "https://instagram.com/yourusername"
+                        "linkedin": "https://it.linkedin.com/in/alessandra-parziale",
+                        "twitter": "https://x.com/ale_parziale?s=11",
+                        "instagram": "https://www.linkedin.com/in/alessandra-parziale?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                        "github": "https://github.com/AlessandraParziale"
+
                     }
                 },
                 "about": {
