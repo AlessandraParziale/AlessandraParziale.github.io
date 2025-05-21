@@ -226,7 +226,7 @@ function loadDynamicContent() {
                     "paragraphs": [
                         "I graduated <b>cum laud</b> in 2024 with a Master's degree in Computer Science from the University of Salerno, specializing in <b>Software Engineering and IT Management</b>.",
                         "I am currently a <b>Research Assistant</b> at the Software Engineering Laboratory [SeSa Lab], under the supervision of <b>Prof. Fabio Palomba</b> and <b>Prof. Andrea De Lucia</b>.",
-                        "My research interests primarily focus on <b>Software Engineering</b>, with particular attention to the ethical and social aspects of Machine Learning-based systems. Specifically, I am interested in topics such as <b>Fairness Engineering</b>, <b>Algorithmic Justice</b>, <b>Social Awareness</b>, and <b>Fairness Testing</b> in Machine Learning models."
+                        "My research interests primarily focus on <b>Software Engineering</b>, with particular attention to the ethical and social aspects of Machine Learning-based systems. Specifically, my work explores topics as <b>Fairness Engineering</b>, <b>Bias Monitoring</b>, and <b>Fairness Testing</b>."
                     ]
                 },
                 "awards": [
