@@ -4,9 +4,14 @@
     "title": "Software Engineering for AI Researcher",
     "shortBio": "",
     "photoUrl": "photo.jpg",
-    "fullBio": [
-    ""
-      ]
+    "socialLinks": {
+              "googleScholar": "https://scholar.google.com/citations?user=c7uV7wIAAAAJ&hl=it",
+              "linkedin": "https://it.linkedin.com/in/alessandra-parziale",
+              "twitter": "https://x.com/ale_parziale?s=11",
+              "instagram": "https://www.linkedin.com/in/alessandra-parziale?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+              "github": "https://github.com/AlessandraParziale"
+
+      }
   },
   "publications": [
     {
