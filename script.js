@@ -217,7 +217,7 @@ function loadDynamicContent() {
                         "googleScholar": "https://scholar.google.com/citations?user=c7uV7wIAAAAJ&hl=it",
                         "linkedin": "https://it.linkedin.com/in/alessandra-parziale",
                         "twitter": "https://x.com/ale_parziale?s=11",
-                        "instagram": "https://www.linkedin.com/in/alessandra-parziale?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                        "instagram": "https://www.instagram.com/alessandra_parziale_?igsh=MWJocWx1MXE2ODZkMQ%3D%3D&utm_source=qr",
                         "github": "https://github.com/AlessandraParziale"
 
                     }
@@ -286,7 +286,7 @@ function loadContentFromData(data) {
         const heroName = document.querySelector('.hero-name');
         const heroTitle = document.querySelector('.hero-title');
         const socialIcons = document.querySelectorAll('.social-icons a');
-        const socialKeys = ['github', 'linkedin', 'googleScholar', 'twitter', 'instagram'];
+        const socialKeys = ['googleScholar', 'linkedin', 'twitter', 'instagram', 'github'];
 
         if (headerLogo) headerLogo.textContent = data.profile.name;
         if (heroName) heroName.textContent = data.profile.name;
