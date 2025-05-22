@@ -233,7 +233,7 @@ function loadDynamicContent() {
                     {
                         "icon": "trophy",
                         "title": "Best Paper Award",
-                        "description": "For Contextual Fairness-Aware Practices in ML <br> 1st International Workshop on Fairness in Software Systems <br><br> <b> SANER 2025 </b> <br> <b> Montréal, Québec, Canada </b>"
+                        "description": "1st International Workshop on Fairness in Software Systems (Fairness’2025)<br><br> <b> SANER 2025 </b> <br> <b> Montréal, Québec, Canada </b>"
                     }
                 ],
                 "publications": [
