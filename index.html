@@ -1,537 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alessandra Parziale | Research Assistant</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/cv.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/publications.css">
-    <link rel="stylesheet" href="css/research.css">
-    <link rel="stylesheet" href="css/utils.css">
-    <link rel="icon" href="assets/icons/favicon.ico">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/icons/favicon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/android-chrome-x512.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-chrome-x192.png">
-    <link rel="apple-touch-icon" sizes="200x200" href="assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="assets/icons/site.webmanifest">
+        :root {
+            --primary-color: #8B7AB8;
+            --secondary-color: #6B5B95;
+            --text-color: #2c3e50;
+            --light-text: #666;
+            --border-color: #e0e0e0;
+            --bg-white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-white);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .profile-image-container {
+            flex-shrink: 0;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+
+        .bio-text {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .contact-item i {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Publications */
+        .publication-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .publication-item:hover {
+            box-shadow: 0 4px 12px rgba(139, 122, 184, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-authors {
+            color: var(--light-text);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-venue {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .publication-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .publication-link {
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .publication-type-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            background-color: white;
+            color: var(--primary-color);
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
 
+        .publication-link:hover {
+            background-color: var(--secondary-color);
+        }
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
-    <script>
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.worker.min.js';
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap">
-    <script src="script.js" defer></script>
+        /* Awards */
+        .award-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .award-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .award-content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .award-content p {
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+
+        /* CV Section */
+        .cv-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .cv-category {
+            background: #fafafa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .cv-category h3 {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .cv-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cv-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .cv-item-title {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+
+        .cv-item-subtitle {
+            color: var(--light-text);
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .cv-item-period {
+            color: var(--primary-color);
+            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .cv-item-period2 {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .cv-item-description {
+            color: var(--light-text);
+            line-height: 1.5;
+            font-size: 0.85rem;
+        }
+
+        /* Service Items (for reviews, committees, etc.) */
+        .service-list {
+            list-style: none;
+        }
+
+        .service-item {
+            padding: 0.5rem 0;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .service-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--light-text);
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            nav ul.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                border-bottom: 1px solid var(--border-color);
+                padding: 1rem;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .cv-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<!-- Header -->
-<header>
-    <div class="container nav-container">
-        <a href="#" class="logo"></a>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#cv">Experience</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </div>
-</header>
-
-<!-- Compact Merged Hero and About Section with Relocated Info Boxes -->
-<section id="home" class="hero-about">
-    <div class="container hero-about-container">
-        <!-- Single Card Layout -->
-        <div class="hero-card">
-            <!-- Left Column: Profile Image and Info Boxes -->
-            <div class="profile-column">
-
-                <div class="profile-image">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="assets/photo.jpg" alt="Alessandra Parziale">
-                            </div>
-                        </div>
-                    </div>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Alessandra Parziale</div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
                 </div>
-
-
-                <!-- Single Info Box - All information in one container -->
-                <div class="profile-info-unified">
-                    <!-- Research -->
-                    <div class="info-row">
-                        <div class="info-icon">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <div class="info-content">
-                            <strong>Research:</strong> Fairness Engineering & Testing
-                        </div>
-                    </div>
-
-                    <!-- Location -->
-                    <div class="info-row">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <strong>Location:</strong> University of Salerno
-                        </div>
-                    </div>
-
-                    <!-- Affiliation -->
-                    <div class="info-row">
-                        <div class="info-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <div class="info-content">
-                            <strong>Affiliation:</strong> <a href="https://sesalabunisa.github.io/en/index.html" target="_blank">Software Engineering (SeSa) Lab</a>
-                        </div>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="info-row">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <strong>Email:</strong> alparziale@unisa.it
-                        </div>
-                    </div>
-
-                    <!-- Date of Birth -->
-                    <div class="info-row">
-                        <div class="info-icon">
-                            <i class="fas fa-calendar"></i>
-                        </div>
-                        <div class="info-content">
-                            <strong>Date of Birth:</strong> October 21, 2000
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column: Text Content -->
-            <div class="profile-content">
-                <!-- Header Area -->
-                <div class="profile-header">
-                    <h1 class="hero-name">Alessandra Parziale</h1>
-                    <p class="hero-title">Research Assistant</p>
-
-
-                    <!-- Social Icons with tooltips -->
-                    <div class="social-icons">
-                        <a href="https://scholar.google.com/citations?user=c7uV7wIAAAAJ&hl=it" target="_blank" class="social-link" data-tooltip="Alessandra Parziale">
-                            <i class="fas fa-graduation-cap"></i>
-                        </a>
-
-                        <a href="https://it.linkedin.com/in/alessandra-parziale" target="_blank" class="social-link" data-tooltip="Alessandra Parziale">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-
-                        <a href="https://x.com/ale_parziale?s=11" target="_blank" class="social-link" data-tooltip="@Ale_Parziale">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                        </a>
-
-                        <a href="https://www.instagram.com/alessandra_parziale_?igsh=MWJocWx1MXE2ODZkMQ%3D%3D&utm_source=qr" target="_blank" class="social-link" data-tooltip="alessandra_parziale_">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a href="https://github.com/AlessandraParziale" target="_blank" class="social-link" data-tooltip="AlessandraParziale">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Bio Section -->
-                <div class="about-bio">
-                </div>
-
-            </div>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="profile-image-container">
+                <img src="assets/photo.jpg" alt="Alessandra Parziale" class="profile-image">
+            </div>
+            <div class="hero-content">
+                <h1>Alessandra Parziale</h1>
+                <p class="subtitle">Research Assistant</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>alparziale@unisa.it</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>University of Salerno</span>
+                    </div>
+                </div>
+
+                <div class="bio-text">
+                    <p>I graduated <strong>cum laude</strong> in 2024 with a Master's degree in Computer Science from the University of Salerno, specializing in Software Engineering and IT Management.</p>
+                    <p>I am currently a Research Assistant at the Software Engineering Laboratory (SeSa Lab), under the supervision of Prof. Fabio Palomba and Prof. Andrea De Lucia.</p>
+                    <p>My research focuses on <strong>Fairness Engineering</strong>, <strong>Fairness Testing</strong>, and <strong>Bias Monitoring</strong> in <strong>Generative AI (GenAI)</strong> systems.</p>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?user=c7uV7wIAAAAJ&hl=it" target="_blank" title="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://it.linkedin.com/in/alessandra-parziale" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/ale_parziale?s=11" target="_blank" title="Twitter/X">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://github.com/AlessandraParziale" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2 class="section-title">Publications</h2>
+
+            <div class="publication-item">
+                <div class="publication-title">Fairness on a budget, across the board: A cost-effective evaluation of fairness-aware practices across contexts, tasks, and sensitive attributes</div>
+                <div class="publication-authors"><strong>A. Parziale</strong>, G. Voria, G. Giordano, G. Catolino, G. Robles, F. Palomba</div>
+                <div class="publication-venue">Information and Software Technology - 2025</div>
+                <div class="publication-links">
+                    <span class="publication-type-badge">IST - Journal | 2025</span>
+                    <a href="assets/papers/Fairness_on_a_budget.pdf" target="_blank" class="publication-link">
+                        <i class="fas fa-file-pdf"></i> Paper
+                    </a>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Contextual Fairness-Aware Practices in ML: A Cost-Effective Empirical Evaluation</div>
+                <div class="publication-authors"><strong>A. Parziale</strong>, G. Voria, G. Giordano, G. Catolino, G. Robles, F. Palomba</div>
+                <div class="publication-venue">1st International Workshop on Fairness in Software Systems - SANER 2025</div>
+                <div class="publication-links">
+                    <span class="publication-type-badge">SANER - FAIRNESS | 2025 </span>
+                    <a href="assets/papers/Fairness-Aware Practices.pdf" target="_blank" class="publication-link">
+                        <i class="fas fa-file-pdf"></i> Paper
+                    </a>
+  
+                </div>
+            </div>
 
 
-<!-- Publications Section -->
-<section id="publications" class="section publications">
-    <div class="container">
-        <h2 class="section-title">Publications</h2>
-    </div>
-</section>
+            <div class="publication-item">
+                <div class="publication-title">Teaching Software Engineering for Artificial Intelligence: An Experience Report</div>
+                <div class="publication-authors">F. Palomba, G. Voria, <strong>A. Parziale</strong>, V. Pentangelo, A. Della Porta, V. De Martino, G. Recupito, G. Giordano</div>
+                <div class="publication-venue">Euromicro Conference on Software Engineering and Advanced Applications - 2025</div>
+                <div class="publication-links">
+                    <span class="publication-type-badge">SEAA | 2025</span>
+                    <a href="assets/papers/Teaching_Software_Engineering_for_Artificial_Intelligence.pdf" target="_blank" class="publication-link">
+                        <i class="fas fa-file-pdf"></i> Paper
+                    </a>
+                </div>
+            </div>
 
-<!-- Research Section -->
-<section id="awards" class="section research">
-    <div class="container">
-        <h2 class="section-title">Awards and Recognition</h2>
-        <div class="research-grid">
-            <!-- Research items will be dynamically populated -->
-        </div>
-    </div>
-</section>
 
-<!-- CV Section -->
-<section id="cv" class="section cv">
-    <div class="container">
-        <h2 class="section-title"> </h2>
-        <div class="cv-grid">
-            <div class="cv-column">
-                <div class="cv-section research-experience">
+        </section>
+
+        <!-- Awards Section -->
+        <section id="awards">
+            <h2 class="section-title">Awards and Recognition</h2>
+            <div class="award-item">
+                <div class="award-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="award-content">
+                    <h3>Best Paper Award</h3>
+                    <p>1st International Workshop on Fairness in Software Systems (Fairness 2025)<br>
+                    <strong>SANER 2025</strong><br>
+
+                    Montréal, Québec, Canada</p><br>
+                    <div class="publication-links">
+                    <a href="assets/papers/Fairness-Aware Practices.pdf" target="_blank" class="publication-link">
+                        <i class="fas fa-file-pdf"></i> Paper
+                    </a>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="cv-grid">
+                <div class="cv-category">
                     <h3>Research Experience</h3>
-                    <!-- Education items will be dynamically populated -->
+                    <div class="cv-item">
+                        <div class="cv-item-title">Research Assistant</div>
+                        <div class="cv-item-subtitle">University of Salerno</div>
+                        <div class="cv-item-period2">November 2024 - Present</div>
+                    </div>
                 </div>
-                <div class="cv-section experience">
-                    <h3>Experience</h3>
-                    <!-- Education items will be dynamically populated -->
+
+                <div class="cv-category">
+                    <h3>Academic Experience</h3>
+                    
+                    <div class="cv-item">
+                        <div class="cv-item-title">Co-supervisor</div>
+                        <div class="cv-item-period2">5 Bachelor and Master Students</div>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="cv-item-title">Master’s Degree in Computer Science</div>
+                        <div class="cv-item-period2">Software Engineering & IT Management <br> [110 cum laude] <br> July 2024</div>
+                        <div class="cv-item-description">Thesis Advisor: Prof. F. Palomba</div>
+                    </div>
+                    
+
+                    <div class="cv-item">
+                        <div class="cv-item-title">Erasmus+ Traineeship</div>
+                        <div class="cv-item-description">Advisors: Prof. G. Robles Martinez and Prof. F. Palomba</div>
+                        <div class="cv-item-period2">Rey Juan Carlos University [Madrid, Spain] <br> March – June 2024</div>
+                    </div>
+
+
+                
+
+
                 </div>
-                <div class="cv-section projects">
+
+                <!--
+                <div class="cv-category">
                     <h3>Projects</h3>
-                    <!-- Research experience items will be dynamically populated -->
+                    <div class="cv-item">
+                        <div class="cv-item-title">Esistere</div>
+                        <div class="cv-item-subtitle">University of Salerno</div>
+                        <div class="cv-item-period">March 2024</div>
+                        <div class="cv-item-description">Web application for Alzheimer's patients and caregivers</div>
+                    </div>
                 </div>
+-->
+
+                <div class="cv-category">
+                    <h3>Program Committee</h3>
+                    <ul class="service-list">
+
+                        <div class="cv-item">
+                        <div class="cv-item-title" style="display: inline-block;">Fairness Workshop 2026&nbsp;</div>
+                        <div class="cv-item-period2" style="display: inline-block;">[SANER 2026]</div>
+                        </div>
+
+                        <div class="cv-item">
+                        <div class="cv-item-title" style="display: inline-block;">MSR 2026&nbsp;</div>
+                        <div class="cv-item-period2" style="display: inline-block;">[co-located with ICSE 2026]</div>
+                        <div class="cv-item-subtitle">Junior Program Committee</div>
+                        </div>
+
+                        <div class="cv-item">
+                        <div class="cv-item-title" style="display: inline-block;">TechDebt 2026&nbsp;</div>
+                        <div class="cv-item-period2" style="display: inline-block;">[co-located with ICSE 2026]</div>
+                        <div class="cv-item-subtitle">Junior Program Committee</div>
+                        </div>
+
+                        <div class="cv-item">
+                        <div class="cv-item-title" style="display: inline-block;">AIware 20256&nbsp;</div>
+                        <div class="cv-item-period2" style="display: inline-block;">[co-located with ASE 2025]</div>
+                        </div>
+
+                    </ul>
+                </div>
+
+                <div class="cv-category">
+                    <h3>Organizing Committee</h3>
+                    <ul class="service-list">
+
+                        <div class="cv-item">
+                        <div class="cv-item-title">Publicity Chair</div>
+                        <div class="cv-item-period2">Fairness Workshop [SANER 2026]</div>
+                        </div>
+
+                        <div class="cv-item">
+                        <div class="cv-item-title">Web and Publicity Chair</div>
+                        <div class="cv-item-period2">SQA4AI Workshop [SANER 2026]</div>
+                        </div>
+                    </ul>
+                </div>
+
+
+                <div class="cv-category">
+                    <h3>Journal & Conference Reviews</h3>
+                    <ul class="service-list">
+                        <div class="cv-item">
+                        <div class="cv-item-title" style="display: inline-block;">Reviewed research articles for&nbsp;</div>
+                        <div class="cv-item-period2" style="display: inline-block;">IST, JSS, SoftwareX, and SCICO</div>
+                        </div>
+                        
+                    </ul>
+                </div>
+
+
+                <div class="cv-category">
+                    <h3>Student Volunteer</h3>
+                    <ul class="service-list">
+                        <div class="cv-item">
+                        <div class="cv-item-period2">DSD/SEAA 2025</div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="cv-category">
+                    <h3>Collaborations</h3>
+                    <ul class="service-list">
+
+
+                        <div class="cv-item">
+                        <div class="cv-item-title">Gran Sasso Science Institute</div>
+                        <div class="cv-item-period2">[L’Aquila, Italy]</div>
+                        </div>
+
+                        <div class="cv-item">
+                        <div class="cv-item-title">Rey Juan Carlos University</div>
+                        <div class="cv-item-period2">[Madrid, Spain]</div>
+                        </div>
+
+
+                    </ul>
+                </div>
+
+                
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+    </main>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <p></p>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Alessandra Parziale. All Rights Reserved.</p>
+    </footer>
 
-<style>
-        /* Stile per il contenitore dell'immagine del profilo */
-    .profile-image {
-        width: 250px;
-        height: 300px; /* Altezza maggiore per una foto rettangolare */
-        margin: 20px auto;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
 
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.querySelector('nav ul').classList.remove('active');
+                }
+            });
+        });
 
-    .flip-card-front, .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden; /* Safari */
-        backface-visibility: hidden;
-        overflow: hidden;
-        border-radius: 8px; /* Bordi leggermente arrotondati invece che circolare */
-    }
+        // Active nav link
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-    .flip-card-front {
-        background-color: #bbb;
-    }
-
-    .flip-card-back {
-        background-color: #bbb;
-        transform: rotateY(180deg);
-    }
-
-    .flip-card-front img, .flip-card-back img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Styles for the unified profile info box */
-    .profile-info-unified {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-    }
-
-    .info-row {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        padding: 8px 0;
-    }
-
-    .info-row:last-child {
-        margin-bottom: 0;
-    }
-
-    .info-row .info-icon {
-        width: 35px;
-        height: 35px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 15px;
-        flex-shrink: 0;
-    }
-
-    .info-row .info-icon i {
-        color: white;
-        font-size: 16px;
-    }
-
-    .info-row .info-content {
-        flex: 1;
-        font-size: 14px;
-        line-height: 1.4;
-        color: #333;
-    }
-
-    .info-row .info-content strong {
-        color: #2c3e50;
-        font-weight: 600;
-    }
-
-    .info-row .info-content a {
-        color: #667eea;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .info-row .info-content a:hover {
-        color: #764ba2;
-        text-decoration: underline;
-    }
-
-    /* Tooltip styles for social icons */
-    .social-link {
-        position: relative;
-        display: inline-block;
-        transition: transform 0.3s ease;
-    }
-
-    .social-link::before {
-        content: attr(data-tooltip);
-        position: absolute;
-        bottom: -35px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #333;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 4px;
-        font-size: 12px;
-        font-weight: 500;
-        white-space: nowrap;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        pointer-events: none;
-        z-index: 1000;
-    }
-
-    .social-link::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 5px solid transparent;
-        border-bottom-color: #333;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        pointer-events: none;
-        z-index: 1000;
-    }
-
-    .social-link:hover::before,
-    .social-link:hover::after {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .social-link:hover {
-        transform: translateY(-2px);
-    }
-
-    /* Media query per responsività */
-    @media (max-width: 768px) {
-        .profile-image {
-            width: 200px;
-            height: 240px;
-            margin: 15px auto;
-        }
-
-        .profile-info-unified {
-            padding: 15px;
-        }
-
-        .info-row .info-icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 12px;
-        }
-
-        .info-row .info-icon i {
-            font-size: 14px;
-        }
-
-        .info-row .info-content {
-            font-size: 13px;
-        }
-
-        /* Adjust tooltip position on mobile */
-        .social-link::before {
-            bottom: -40px;
-            font-size: 11px;
-        }
-    }
-    /* Styles for the unified profile info box */
-    .profile-info-unified {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-    }
-
-    .info-row {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        padding: 8px 0;
-    }
-
-    .info-row:last-child {
-        margin-bottom: 0;
-    }
-
-    .info-row .info-icon {
-        width: 35px;
-        height: 35px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 15px;
-        flex-shrink: 0;
-    }
-
-    .info-row .info-icon i {
-        color: white;
-        font-size: 16px;
-    }
-
-    .info-row .info-content {
-        flex: 1;
-        font-size: 14px;
-        line-height: 1.4;
-        color: #333;
-    }
-
-    .info-row .info-content strong {
-        color: #2c3e50;
-        font-weight: 600;
-    }
-
-    .info-row .info-content a {
-        color: #667eea;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .info-row .info-content a:hover {
-        color: #764ba2;
-        text-decoration: underline;
-    }
-
-    /* Tooltip styles for social icons */
-    .social-link {
-        position: relative;
-        display: inline-block;
-        transition: transform 0.3s ease;
-    }
-
-    .social-link::before {
-        content: attr(data-tooltip);
-        position: absolute;
-        bottom: -35px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #333;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 4px;
-        font-size: 12px;
-        font-weight: 500;
-        white-space: nowrap;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        pointer-events: none;
-        z-index: 1000;
-    }
-
-    .social-link::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 5px solid transparent;
-        border-bottom-color: #333;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        pointer-events: none;
-        z-index: 1000;
-    }
-
-    .social-link:hover::before,
-    .social-link:hover::after {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .social-link:hover {
-        transform: translateY(-2px);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .profile-info-unified {
-            padding: 15px;
-        }
-
-        .info-row .info-icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 12px;
-        }
-
-        .info-row .info-icon i {
-            font-size: 14px;
-        }
-
-        .info-row .info-content {
-            font-size: 13px;
-        }
-
-        /* Adjust tooltip position on mobile */
-        .social-link::before {
-            bottom: -40px;
-            font-size: 11px;
-        }
-    }
-</style>
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
